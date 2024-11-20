@@ -1,0 +1,99 @@
+############   python IO -------------
+f = open("practical.txt", "r")
+data=f.read()
+print(data)
+print(type(data))
+
+
+Open the file in append mode to add content without overwriting
+f = open("practical.txt", "a")
+f.write("\nThis is new text added at the end of the file.")
+f.close()
+print(f)
+
+
+f=open('practical.txt','+a')
+f.write("hello jhon")
+f.close()
+
+f=open("practical.txt",'w')
+f.write("Hey Bro i wish you are fine")
+f.close()
+
+
+f=open("test.txt",'w')
+f.write("Hello Bro!")
+
+
+f=open("d:\\New Text Document.txt",'r')
+line=f.readline()
+print(line)
+
+line2=f.readline()
+print(line2)
+
+# Open the PDF file in binary mode and read its content
+with open(r"d:\Cincooni System Pvt_.pdf", "rb") as file:
+    binary_data = file.read()
+
+# Print the first 100 bytes to see the raw binary data
+print(binary_data[:100])  # Only showing first 100 bytes for brevity
+
+
+with open("d:\\Python\exception handling.py","rb")as f:
+    line=f.readline()
+print(line)
+
+
+import os
+os.remove("test.txt")
+
+with open("d:\\New Text Document.txt","a")as f:
+    data=f.write("manish kumar")
+    data=f.write("\nmanish kumar")
+print(data)
+
+
+with open("task.txt","w") as f:
+    data=f.write("Hello Everyone\nWe are learning python\nand python in easy language")
+    
+with open("task.txt","r") as f:
+    data=f.read()
+    print(data)
+ 
+newdata = data.replace("python", "java")
+
+with open("task.txt", "w") as f:
+    f.write(newdata)
+
+
+
+###########------------ For finding learning           -------------
+posi="learning" 
+with open("task.txt","r") as f:
+    data=f.read()
+    if(data.find(posi)!=-1):
+        print("yes")
+    else:
+        print("no")
+
+
+###########----- For writing it's auto make a text file    
+with open(".practice.txt",'w') as f:
+    data=f.write("In Python, Input and Output (I/O)\n operations refer to reading data from and \nwriting data to various sources, such as files, \nthe console, or other devices. \nHere's a breakdown of different types of I/O operations and some examples for practice.")
+    print(data)
+        
+###############          -----  Reading the entire file           -------
+with open(".practice.txt",'r') as f:
+    data=f.read()
+    print(data)
+
+
+
+###################---------Reading line by line----------
+with open(".practice.txt",'r') as f:
+    data=f.readline()
+    print(data)
+
+
+
